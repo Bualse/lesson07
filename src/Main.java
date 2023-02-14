@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -14,7 +16,7 @@ public class Main {
     public static void task1() {
         System.out.println("Задача 1");
 
-        int[] weights = {1, 2, 3};
+        int[] weights = new int[] {1, 2, 3};
 
         double[] apple = {1.57, 7.654, 9.986};
 
@@ -24,7 +26,7 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
 
-        int[] weights = {1, 2, 3};
+        int[] weights = new int[] {1, 2, 3};
         System.out.print(weights[0] + ", ");
         System.out.print(weights[1] + ", ");
         System.out.println(weights[2]);
@@ -44,7 +46,7 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
 
-        int[] weights = {1, 2, 3};
+        int[] weights = new int[] {1, 2, 3};
         System.out.print(weights[2] + ", ");
         System.out.print(weights[1] + ", ");
         System.out.println(weights[0]);
@@ -66,10 +68,9 @@ public class Main {
 
         int[] weights = {1, 2, 3};
         for (int i = 0; i < weights.length; i++) {
-            if (i % 2 == 0) {
-                System.out.print(weights[i] + 1 + " ");
-            }
-            System.out.print(weights[1] + " ");
+            if (weights[i] % 2 != 0)
+               weights[i] += 1;
         }
+        System.out.println(Arrays.toString(weights));
     }
 }
